@@ -9,7 +9,7 @@ if(r==0){
 else{
   ma=me
   me=r
-  return mcd(r=ma%me);
+  return mcd(r);
 }
 
 int main(){
@@ -24,7 +24,8 @@ int main(){
     cin >> menor;
 
 
-int r=0;
+int r=ma%me;
+
     mcd(menor, mayor, r);
 
     cou<<"MCD: "<< mcd(menor, mayor, r)<< endl;
