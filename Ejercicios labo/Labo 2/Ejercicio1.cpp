@@ -1,17 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int mcd(in ma, int me, r)
+int mcd(in ma, int me, r
 
-r=ma/me;
-
-if(residuo==0){
-  return mcd(ma, me, r);
+if(r==0){
+  return mcd(me)
 }
 else{
-  me=ma;
-  me=residuo
-return mcd(ma/me);
+  ma=me
+  me=r
+  return mcd(ma/me);
 }
 
 int main(){
