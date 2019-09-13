@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int mcd(in ma, int me, r
+int mcd(in ma, int me, r)
 
 if(r==0){
   return mcd(me)
@@ -9,7 +9,7 @@ if(r==0){
 else{
   ma=me
   me=r
-  return mcd(ma/me);
+  return mcd(r=ma%me);
 }
 
 int main(){
