@@ -1,15 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int mcd(in ma, int me, r)
+int mcd(int me, int ma, int r){
 
-if(r==0){
-  return mcd(me)
+if(ma>me){
+return me;
 }
 else{
-  ma=me
-  me=r
-  return mcd(r);
+  me=r;
+  ma=me;
+  return me;
+ }
 }
 
 int main(){
@@ -23,12 +24,11 @@ int main(){
     cout << "Ingrese un numero entero menor al anterior: " << endl;
     cin >> menor;
 
+	int r=mayor/menor;
 
-int r=ma%me;
+ 	mcd(menor, mayor, r);
+ 	 cout<<"MCD: "<<mcd(menor, mayor, r)<< endl;
 
-    mcd(menor, mayor, r);
-
-    cou<<"MCD: "<< mcd(menor, mayor, r)<< endl;
 
 return 0;
   }
