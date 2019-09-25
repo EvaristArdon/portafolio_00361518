@@ -1,0 +1,60 @@
+Ejercicio 1
+
+Infija
+A-B/(C*D$E)
+
+Postfija
+AB-/(C*D$E) (-)
+AB-/(CD$E*) (*)
+AB-/(CDE*$) ($)
+AB-CDE*$/   (/)
+
+Ejercicio 2
+
+Infija
+((A+B)*C-D(D-E))$(F+G)
+
+Postfija
+((AB+)*C-(DE-))$(FG+)  (+-)
+((AB+)C*-(DE-))$(FG+)  (*)
+((AB+)C*-(DE-))(FG+)$  ($)
+AB+C*DE--FG+$          (acomodando)
+
+Algoritmo
+s=(empty(s))
+
+while(no esta vacia){                                         
+    symb= siguiente caracter de salida;
+    if(symb es un operador)                                    
+    agrego symb a respuesta string                             
+    else{                                                       
+       while(!empty(s) && prcd(stacktop(s), symb)){            
+	   topsymb = pop(s);
+	   agrego topsymb a mi respuesta string;
+       } 
+    }
+}
+
+while(!empty(s){
+    topsymb= pop(s);
+    agrego topsymb a mi respuesta string;
+}
+
+if(empty(s) || symb != ')')
+   push(s, symb);
+else
+   topsymb = pop(s) (saco los parentesis y los elimino)
+
+
+prcd('(', op) = FALSE
+
+prcd(op, '(') = FALSE 
+
+prcd(op, ')') = TRUE
+ 
+prcd(')',op) = ERROR
+
+prcd(+,-) = TRUE
+
+prcd(*,/) = TRUE
+
